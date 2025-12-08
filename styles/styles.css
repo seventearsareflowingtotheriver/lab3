@@ -858,6 +858,10 @@ fieldset label:hover {
     padding-left: 5px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #scrollToTopBtn {
     display: none;
     position: fixed;
