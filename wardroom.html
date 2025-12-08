@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body id="page-wardroom">
     <header>
@@ -119,6 +119,10 @@
         </nav>
     </footer>
 
+<a href="#top" id="scrollToTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+    
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const toggleButton = document.querySelector('.menu-toggle');
@@ -138,30 +142,6 @@
         });
     });
 </script>
-
-<button id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollBtn = document.getElementById("scrollToTopBtn");
-
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = "flex";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
-
-        scrollBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    });
-</script>
-
+    
 </body>
 </html>
-
-
