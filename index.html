@@ -135,9 +135,10 @@
     });
 </script>
 
-<button id="scrollToTopBtn" title="Go to top">
+
+<a href="#top" id="scrollToTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
-</button>
+</a>
 
 <div id="surveyModal" class="modal">
     <div class="modal-content">
@@ -162,21 +163,6 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollBtn = document.getElementById("scrollToTopBtn");
-
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.style.display = "flex";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
-
-        scrollBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
         const modal = document.getElementById("surveyModal");
         const closeBtn = document.querySelector(".close-btn");
 
