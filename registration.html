@@ -3,158 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us - Dwarven Mining Assault Brigade</title>
+    <title>News - Dwarven Mining Assault Brigade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body id="page-join">
+<body id="page-wardroom">
+    <div id="top"></div>
+
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
-            </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
 
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="hamburger-btn">
                 <i class="fas fa-bars"></i>
-            </button>
+            </label>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-                <li>
-                    <form role="search">
-                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
+            <div class="nav-menu">
+                <label for="nav-toggle" class="close-btn"><i class="fas fa-times"></i></label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="wardroom.html" class="active">Wardroom &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="wardroom.html">News</a></li>
+                            <li><a href="#">Reports</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="our_achievements.html">Our Achievements</a></li>
+                    <li><a href="registration.html">Join Us</a></li>
+                </ul>
+                <form role="search">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <label for="nav-toggle" class="backdrop"></label>
         </nav>
     </header>
 
     <main>
-        <section id="join">
-            <h2>JOIN US</h2>
-
-            <form id="login-form" aria-labelledby="login-heading">
-                <h3 id="login-heading">Login</h3>
-                <label for="email-login">Email:</label>
-                <input type="email" id="email-login" name="email" required placeholder="your.email@example.com">
-                
-                <label for="password-login">Password:</label>
-                <input type="password" id="password-login" name="password" required>
-                
-                <button type="reset">Clear</button>
-                <button type="submit">Login</button>
-            </form>
-
-            <h3 class="or-between">- OR -</h3>
+        <section id="news">
+            <h2>OPERATIONAL REPORTS & FRONTLINE NEWS</h2>
             
-            <form id="registration-form" aria-labelledby="registration-heading">
-                <h3 id="registration-heading">Registration</h3>
-                <label for="email-reg">Email:</label>
-                <input type="email" id="email-reg" name="email" required placeholder="your.email@example.com">
+            <div class="news-grid">
                 
-                <label for="password-reg">Password (min 8 characters):</label>
-                <input type="password" id="password-reg" name="password" required minlength="8">
-                
-                <label for="password-confirm">Confirm Password:</label>
-                <input type="password" id="password-confirm" name="password-confirm" required>
-                
-                <button type="reset">Clear</button>
-                <button type="submit">Register</button>
-            </form>
+                <article class="news-card">
+                    <div class="news-header">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 25, 2025</span>
+                        <span class="news-tag tag-victory">Major Victory</span>
+                    </div>
 
-            <form id="survey-form" aria-labelledby="survey-heading">
-                <h3 id="survey-heading">Applicant Survey</h3>
-                
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required placeholder="Your dwarf name">
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="dwarf@example.com">
-                
-                <label for="message">Why Join Us?</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Share your motivation..."></textarea>
-                
-                <label for="role">Preferred Role:</label>
-                <select id="role" name="role" required>
-                    <option value="" disabled selected>Select a role</option>
-                    <option value="scout">Scout</option>
-                    <option value="engineer">Engineer</option>
-                    <option value="driller">Driller</option>
-                    <option value="gunner">Gunner</option>
-                </select>
-                
-                <fieldset>
-                    <legend>Experience Level:</legend>
-                    <input type="radio" id="novice" name="experience" value="novice" required>
-                    <label for="novice">Novice Miner</label><br>
-                    <input type="radio" id="veteran" name="experience" value="veteran">
-                    <label for="veteran">Veteran Dwarf</label><br>
-                    <input type="radio" id="legendary" name="experience" value="legendary">
-                    <label for="legendary">Legendary Rock Breaker</label>
-                </fieldset>
-                
-                <fieldset>
-                    <legend>Skills (select all that apply):</legend>
-                    <input type="checkbox" id="mining" name="skills" value="mining">
-                    <label for="mining">Mining Expertise</label><br>
-                    <input type="checkbox" id="combat" name="skills" value="combat">
-                    <label for="combat">Bug Extermination</label><br>
-                    <input type="checkbox" id="building" name="skills" value="building">
-                    <label for="building">Engineering Builds</label><br>
-                    <input type="checkbox" id="drilling" name="skills" value="drilling">
-                    <label for="drilling">Drilling Mastery</label>
-                </fieldset>
-                
-                <button type="reset">Clear Form</button>
-                <button type="submit">Submit Survey</button>
-                <audio id="submission-sound" src="success.mp3" preload="auto"></audio>
-            </form>
+                    <div class="news-img-wrapper">
+                        <img src="images/news/news1.jpg" alt="Salt Mine Liberation">
+                        <div class="img-overlay">
+                            <span>Liberation of Salt Mine #4</span>
+                        </div>
+                    </div>
+
+                    <h3>Liberation of Salt Mine #4</h3>
+                    
+                    <p>Our brave Driller corps managed to collapse a key smuggling tunnel used by Russian elves, burying their supply lines under tons of glorious rock.</p>
+                    
+                    <input type="checkbox" class="read-more-state" id="post-1">
+                    
+                    <div class="read-more-wrap">
+                        <p>The operation, codenamed "Salty Surprise", was executed with surgical precision using C4 charges. The subsequent cavern celebration reportedly caused mild seismic activity in the region. Local wildlife has been secured, and beer production has resumed at full capacity.</p>
+                        <p><strong>Casualties:</strong> None (except for a few hangovers).<br><strong>Loot secured:</strong> 5000 units of Nitra.</p>
+                    </div>
+                    
+                    <label for="post-1" class="read-more-trigger"></label>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-header">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 20, 2025</span>
+                        <span class="news-tag tag-update">Tech Update</span>
+                    </div>
+
+                    <div class="news-img-wrapper">
+                        <img src="images/news/news2.jpg" alt="Bosco Drone">
+                        <div class="img-overlay">
+                            <span>New Bosco Units</span>
+                        </div>
+                    </div>
+
+                    <h3>New Anti-Elf Bosco Units Deployed</h3>
+                    <p>R&D has retrofitted our Bosco drones with enhanced sensors to detect pointy-ear magic signatures in the Donetsk sector.</p>
+
+                    <input type="checkbox" class="read-more-state" id="post-2">
+                    <div class="read-more-wrap">
+                        <p>Early field tests show a 400% increase in "accidental" discharges against hostile targets disguised as trees. The new firmware update v4.2 also allows Bosco to salute "Rock and Stone" upon a successful kill.</p>
+                        <p>Miners are advised not to stand directly in front of Bosco during calibration protocols.</p>
+                    </div>
+                    
+                    <label for="post-2" class="read-more-trigger"></label>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-header">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 15, 2025</span>
+                        <span class="news-tag tag-hero">Hero Spotlight</span>
+                    </div>
+
+                    <div class="news-img-wrapper">
+                        <img src="images/news/news3.jpg" alt="Gunner Interview">
+                        <div class="img-overlay">
+                            <span>Interview with Gimli</span>
+                        </div>
+                    </div>
+
+                    <h3>Interview: Karl's Spiritual Successor?</h3>
+                    <p>"These elves fight like leaf-lovers," says veteran Gunner 'Bore-Master' Gimli. "A little bit of minigun fire and they scatter."</p>
+
+                    <input type="checkbox" class="read-more-state" id="post-3">
+                    <div class="read-more-wrap">
+                        <p>"The real challenge is finding enough ammo for the whole horde. Back on Hoxxes, we had bugs. Here, we have orcs and elves. Different skin, same satisfying crunch when the Drop Pod lands on them."</p>
+                        <p>Gimli was later seen arm-wrestling a Driller for the last round of Oily Oaf Brew. He won.</p>
+                    </div>
+                    
+                    <label for="post-3" class="read-more-trigger"></label>
+                </article>
+
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-            </ul>
-        </nav>
     </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            const icon = toggleButton.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-
-<a href="#top" id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</a>
-    
+    <a href="#top" id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
-    </html>
+</html>

@@ -11,30 +11,37 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body id="page-about">
+    <div id="top"></div>
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
-
-            </div>
-            
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="hamburger-btn">
                 <i class="fas fa-bars"></i>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-                <li>
-                    <form role="search">
-                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
+            </label>
+            <div class="nav-menu">
+                <label for="nav-toggle" class="close-btn"><i class="fas fa-times"></i></label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="wardroom.html">Wardroom &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="wardroom.html">News</a></li>
+                            <li><a href="#">Reports</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="our_achievements.html">Our Achievements</a></li>
+                    <li><a href="registration.html">Join Us</a></li>
+                </ul>
+                <form role="search">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <label for="nav-toggle" class="backdrop"></label>
         </nav>
     </header>
 
@@ -44,25 +51,23 @@
             <p class="lead">We dig deeper. We fight harder. We reclaim what is ours.</p>
         </section>
 
-        <h3 class="sector-between"></h3>
-
         <section id="about-content">
-            <div class="lore-block transparent-panel">
+            <div class="transparent-panel">
                 <h3>Our Mission in Donbas</h3>
-                <p>Formed from the most hardened veterans of Deep Rock Galactic, our brigade was deployed to the Donbas region with a single directive: clear the ancient coal mines and salt tunnels from the invasive "Russian Elve" menace. These pointy-eared saboteurs threaten the structural integrity of the entire region, but they haven't met our drills yet.</p>
+                <p>Formed from the most hardened veterans of Deep Rock Galactic, our brigade was deployed to the Donbas region with a single directive.</p>
             </div>
 
-            <div class="lore-block transparent-panel">
+            <div class="transparent-panel">
                 <h3>War against the "Elves"</h3>
-                <p>Unlike the Glyphids of Hoxxes IV, these "elves" use treacherous magic and shoddy equipment. But against honest dwarven steel, heavy autocannons, and excessive amounts of C4, their tactics crumble. We don't just mine minerals; we mine victory from the jaws of the earth.</p>
+                <p>Unlike the Glyphids of Hoxxes IV, these "elves" use treacherous magic and shoddy equipment. But against honest dwarven steel, their tactics crumble.</p>
             </div>
 
-            <div class="lore-block transparent-panel">
+            <div class="transparent-panel">
                 <h3>Our Creed</h3>
                 <ul>
-                    <li><i class="fas fa-hammer"></i> <strong>Leave No Dwarf Behind:</strong> Unless they carry Leaf Lover's Special.</li>
-                    <li><i class="fas fa-shield-alt"></i> <strong>Rock and Stone!</strong> It's more than a shout; it's a way of life.</li>
-                    <li><i class="fas fa-beer"></i> <strong>Victory Pints:</strong> The harder the fight, the colder the beer afterwards.</li>
+                    <li><i class="fas fa-hammer"></i> <strong>Leave No Dwarf Behind</strong></li>
+                    <li><i class="fas fa-shield-alt"></i> <strong>Rock and Stone!</strong></li>
+                    <li><i class="fas fa-beer"></i> <strong>Victory Pints</strong></li>
                 </ul>
             </div>
         </section>
@@ -70,40 +75,11 @@
 
     <footer>
         <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-            </ul>
-        </nav>
     </footer>
 
-<a href="#top" id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</a>
+    <a href="#top" id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
     
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            const icon = toggleButton.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-</script>
-
 </body>
 </html>

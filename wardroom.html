@@ -11,95 +11,89 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body id="page-wardroom">
+    <div id="top"></div>
     <header>
         <nav>
-            <div class="logo">
-                <img src="images/logo.png" alt="Dwarven Mining Assault Brigade Logo">
-            </div>
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+            <label for="nav-toggle" class="hamburger-btn">
                 <i class="fas fa-bars"></i>
-            </button>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-                <li>
-                    <form role="search">
-                        <input type="search" placeholder="Search...&#x1F50D;" aria-label="Search">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </form>
-                </li>
-            </ul>
+            </label>
+            <div class="nav-menu">
+                <label for="nav-toggle" class="close-btn"><i class="fas fa-times"></i></label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="wardroom.html">Wardroom &#9662;</a>
+                        <ul class="dropdown-content">
+                            <li><a href="wardroom.html">News</a></li>
+                            <li><a href="#">Reports</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="our_achievements.html">Our Achievements</a></li>
+                    <li><a href="registration.html">Join Us</a></li>
+                </ul>
+                <form role="search">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <label for="nav-toggle" class="backdrop"></label>
         </nav>
     </header>
 
     <main>
         <section id="news">
             <h2>OPERATIONAL REPORTS & FRONTLINE NEWS</h2>
-            <h3 class="sector-between"></h3>
-            
             <div class="news-grid">
-                <article class="news-card transparent-panel">
+                <article class="news-card">
                     <div class="news-header">
                         <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 25, 2025</span>
                         <span class="news-tag tag-victory">Major Victory</span>
                     </div>
-
                     <div class="news-img-wrapper">
                         <img src="images/news/news1.jpg" alt="Dwarves celebration">
-                        
                         <div class="img-overlay">
-                            <span>Read Full Report <i class="fas fa-arrow-right"></i></span>
+                            <span>Read Full Report</span>
                         </div>
                     </div>
                     <h3>Liberation of Salt Mine #4</h3>
-                    <p>Our brave Driller corps managed to collapse a key smuggling tunnel
-                         used by Russian elves, burying their supply lines under tons of
-                          glorious rock. The subsequent cavern celebration reportedly caused
-                           mild seismic activity.</p>
+                    <p>Our brave Driller corps managed to collapse a key smuggling tunnel used by Russian elves.</p>
                     <a href="#" class="read-more">Read Full Report -></a>
                 </article>
 
-                <article class="news-card transparent-panel">
+                <article class="news-card">
                     <div class="news-header">
                         <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 20, 2025</span>
                         <span class="news-tag tag-update">Tech Update</span>
                     </div>
-
                     <div class="news-img-wrapper">
-                        <img src="images/news/news2.jpg" alt="Dwarves celebration">
-                        
+                        <img src="images/news/news2.jpg" alt="Drone tech">
                         <div class="img-overlay">
-                            <span>Read Full Report <i class="fas fa-arrow-right"></i></span>
+                            <span>Read Full Report</span>
                         </div>
                     </div>
                     <h3>New Anti-Elf Bosco Units Deployed</h3>
-                    <p>R&D has retrofitted our Bosco drones with enhanced sensors to detect
-                         pointy-ear magic signatures. Early tests in the Donetsk sector show
-                          a 400% increase in "accidental" discharges against hostile targets.</p>
+                    <p>R&D has retrofitted our Bosco drones with enhanced sensors to detect magic signatures.</p>
                     <a href="#" class="read-more">Technical Specs -></a>
                 </article>
 
-                <article class="news-card transparent-panel">
+                <article class="news-card">
                     <div class="news-header">
                         <span class="news-date"><i class="far fa-calendar-alt"></i> Nov 15, 2025</span>
                         <span class="news-tag tag-hero">Hero Spotlight</span>
                     </div>
-
                     <div class="news-img-wrapper">
-                        <img src="images/news/news3.jpg" alt="Dwarves celebration">
-                        
+                        <img src="images/news/news3.jpg" alt="Hero Interview">
                         <div class="img-overlay">
-                            <span>Read Full Report <i class="fas fa-arrow-right"></i></span>
+                            <span>Read Full Report</span>
                         </div>
                     </div>
                     <h3>Interview: Karl's Spiritual Successor?</h3>
-                    <p>"These elves fight like leaf-lovers," says veteran Gunner 'Bore-Master'
-                         Gimli. "A little bit of minigun fire and they scatter. The real
-                          challenge is finding enough ammo for the whole horde. Rock and Stone!"</p>
+                    <p>"These elves fight like leaf-lovers," says veteran Gunner 'Bore-Master' Gimli.</p>
                     <a href="#" class="read-more">Read Interview -></a>
                 </article>
             </div>
@@ -108,40 +102,10 @@
 
     <footer>
         <p>&copy; 2025 Dwarven Mining Assault Brigade. Rock and Stone!</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="wardroom.html">Wardroom</a></li>
-                <li><a href="our_achievements.html">Our Achievements</a></li>
-                <li><a href="registration.html">Join Us</a></li>
-            </ul>
-        </nav>
     </footer>
 
-<a href="#top" id="scrollToTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</a>
-    
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const toggleButton = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            
-            const icon = toggleButton.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    });
-</script>
-    
+    <a href="#top" id="scrollToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 </html>
